@@ -1,5 +1,7 @@
 package com.hunter.spittr.service;
 
+import com.hunter.spittr.meta.PageVo;
+import com.hunter.spittr.meta.Post;
 import com.hunter.spittr.meta.PostPo;
 import com.hunter.spittr.meta.PostVo;
 
@@ -12,5 +14,6 @@ import java.util.Map;
  * @Content
  */
 public interface PostService {
-    public Map<PostPo,List<PostPo>> getAllPost(int id);
+    public PageVo<Post> getAllPost(int pageNum,int id);
+    public boolean replayPost(Post post);
 }

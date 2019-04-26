@@ -1,5 +1,6 @@
 package com.hunter.spittr.controller;
 
+import com.hunter.spittr.meta.Post;
 import com.hunter.spittr.meta.PostPo;
 import com.hunter.spittr.meta.PostVo;
 import com.hunter.spittr.service.PostService;
@@ -27,11 +28,15 @@ public class PostController {
     @Autowired
     PostService postService;
 
-    @RequestMapping("/post")
 
-    public void getAllPost(Model model){
-        Map<PostPo,List<PostPo>> map = postService.getAllPost(0);
-        model.addAttribute("map",map);
 
+    @RequestMapping("/replay")
+    @ResponseBody
+    public Result replayPost(Post post){
+        boolean flag = postService.replayPost(post);
+        if(flag)
+            return Result.ok();
+        else
+            return Result.error();
     }
 }

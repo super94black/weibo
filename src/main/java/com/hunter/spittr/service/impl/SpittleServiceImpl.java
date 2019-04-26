@@ -20,7 +20,7 @@ public class SpittleServiceImpl implements SpittleService {
     public PageInfo<Spittle> getSpittleList(int pageNum) {
 
         //提供 页码和每页显示的数量参数
-        PageHelper.startPage(pageNum, 10);
+        PageHelper.startPage(pageNum, 3);
         //startPage方法之后紧跟的查询 才是 分页查询
         List<Spittle> spittles = spittleDao.getSpittleList();
         //使用pageInfo包装查询后的结果，只需将pageInfo交给页面即可

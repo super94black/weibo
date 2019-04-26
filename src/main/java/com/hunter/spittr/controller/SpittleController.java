@@ -1,12 +1,10 @@
 package com.hunter.spittr.controller;
 
 import com.github.pagehelper.PageInfo;
-import com.hunter.spittr.meta.PostPo;
-import com.hunter.spittr.meta.Spitter;
+import com.hunter.spittr.meta.*;
 import com.hunter.spittr.service.PostService;
 import com.hunter.spittr.service.SpitterService;
 import com.hunter.spittr.service.SpittleService;
-import com.hunter.spittr.meta.Spittle;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -32,20 +30,13 @@ public class SpittleController {
     private PostService postService;
 
     //获取动态列表
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(value = "index",method = RequestMethod.GET)
     public String getSpittleList(@RequestParam(value = "pageNum", defaultValue = "1") int pageNum,
                                  Model model) {
-        model.addAttribute("spittle", new Spittle(null, null, null, null, null));
 
-
-
-
-        PageInfo pageInfo = spittleService.getSpittleList(pageNum);
-        model.addAttribute("pageInfo", pageInfo);
-
-        Map<PostPo, List<PostPo>> map = postService.getAllPost(0);
-        model.addAttribute("map",map);
-
+        PageVo<Post> pageVo = postService.getAllPost(pageNum,0);
+        model.addAttribute("map",pageVo.getMap());
+        model.addAttribute("pageInfo", pageVo.getPageInfo());
         return "index";
     }
 

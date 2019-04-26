@@ -1,10 +1,11 @@
 package com.hunter.spittr.dao;
 
 import com.hunter.spittr.meta.Post;
-import com.hunter.spittr.meta.Spitter;
-import org.apache.ibatis.annotations.ResultMap;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
+import java.util.List;
 import java.util.List;
 
 /**
@@ -18,12 +19,20 @@ public interface PostDao {
     List<Post> getAllPost();
 
 
-    @Select("SELECT * FROM post WHERE pid = #{pid} order by create_time desc")
+    @Select("SELECT * FROM post WHERE pid = #{pid} and type =1 order by create_time desc")
     List<Post> getAllPostByPid(int pid);
 
-    @Select("SELECT * FROM post WHERE id = #{pid}")
+    @Select("SELECT * FROM post WHERE id = #{pid} and type = 1")
     Post getPostById(int pid);
 
-    @Select("SELECT * FROM post WHERE pid = #{pid} order by create_time asc")
+    @Select("SELECT * FROM post WHERE pid = #{pid} and type = 1 order by create_time asc")
     List<Post> getAllPostByPidAndAsc(int pid);
+
+    @Insert("INSERT INTO post(img_add, content, pid, uid, root, is_leaf, create_time, " +
+            "update_time, type) VALUES (#{img_add}, #{content}, #{pid}, #{uid}, #{root}, #{is_leaf}, #{create_time}," +
+            "#{update_time}, #{type})")
+    void replayPost(Post post);
+
+    @Update("update post set is_leaf = 0 where id = #{id}")
+    void updatePostLeaf(int id);
 }

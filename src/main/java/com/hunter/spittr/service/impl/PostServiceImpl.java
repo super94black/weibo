@@ -1,19 +1,17 @@
 package com.hunter.spittr.service.impl;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.hunter.spittr.dao.PostDao;
 import com.hunter.spittr.dao.SpitterDao;
-import com.hunter.spittr.meta.Post;
-import com.hunter.spittr.meta.PostPo;
-import com.hunter.spittr.meta.PostVo;
-import com.hunter.spittr.meta.Spitter;
+import com.hunter.spittr.meta.*;
 import com.hunter.spittr.service.PostService;
+import javafx.geometry.Pos;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.sql.Timestamp;
+import java.util.*;
 
 
 /**
@@ -36,13 +34,18 @@ public class PostServiceImpl implements PostService {
      * @return
      */
 
-    public Map<PostPo,List<PostPo>> getAllPost(int id){
-        Map<PostPo,List<PostPo>> map = new HashMap<PostPo, List<PostPo>>();
+    public PageVo<Post> getAllPost(int pageNum,int id){
         List<Post> list = new ArrayList<Post>();
+        PageHelper.startPage(pageNum, 3);
+        //startPage方法之后紧跟的查询 才是 分页查询
         list = postDao.getAllPostByPid(id);
+        //使用pageInfo包装查询后的结果，只需将pageInfo交给页面即可
+        PageInfo<Post> pageInfo = new PageInfo<Post>(list);
+
+        PageVo<Post> pageVo = new PageVo<Post>();
+        Map<PostPo, List<PostPo>> map = new HashMap<PostPo, List<PostPo>>();
         if(null == list || list.size() == 0)
             return null;
-
 
         for (Post post : list) {
             PostPo postPo = new PostPo();
@@ -50,14 +53,13 @@ public class PostServiceImpl implements PostService {
             postPo.setSpitter(spitterDao.getByUserId(post.getUid()));
             postPo.setPost(post);
             postPo.setReplayName(null);
-
             postPoList = getAllPost(postPoList,post);
             map.put(postPo,postPoList);
-
-
         }
-//
-        return map;
+
+        pageVo.setMap(map);
+        pageVo.setPageInfo(pageInfo);
+        return pageVo;
     }
 
     /**
@@ -159,5 +161,24 @@ public class PostServiceImpl implements PostService {
 //
 //        return plist;
 //    }
+
+
+
+    public boolean replayPost(Post post){
+
+        post.setCreate_time(new Timestamp(System.currentTimeMillis()));
+        post.setIs_leaf(1);
+        post.setType(1);
+        post.setRoot(0);
+        postDao.replayPost(post);
+
+        Post p = postDao.getPostById(post.getPid());//此处的pid是postId
+        if(post.getIs_leaf() == 1){
+            postDao.updatePostLeaf(p.getId());
+        }
+        return true;
+
+
+    }
 
 }
