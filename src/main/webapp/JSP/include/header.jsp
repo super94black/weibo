@@ -15,7 +15,7 @@
             </form>
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="<c:url value="/"/>">
+                    <a href="<c:url value="/index"/>">
                         <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
                         首页
                     </a>

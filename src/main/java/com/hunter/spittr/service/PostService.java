@@ -14,6 +14,7 @@ import java.util.Map;
  * @Content
  */
 public interface PostService {
-    public PageVo<Post> getAllPost(int pageNum,int id);
+    public PageVo<Post> getAllPost(int pageNum,int id,int userId);
     public boolean replayPost(Post post);
+    public void deleteByPostId(int id);
 }

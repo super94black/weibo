@@ -1,5 +1,10 @@
-
+var postId;
+var userId;
+var delId;
+var zanCount;
+var isZan;
 window.onload = function () {
+    var nickName = $("#nickName").val();
     var list = document.getElementById('list');
     var boxs = list.children;
     var timer;
@@ -19,6 +24,8 @@ window.onload = function () {
     //删除节点
     function removeNode(node) {
         node.parentNode.removeChild(node);
+
+
     }
 
     /**
@@ -27,23 +34,57 @@ window.onload = function () {
      * @param el 点击的元素
      */
     function praiseBox(box, el) {
+
+        var count = 0;
         var txt = el.innerHTML;
         var praisesTotal = box.getElementsByClassName('praises-total')[0];
         var oldTotal = parseInt(praisesTotal.getAttribute('total'));
-        var newTotal;
-        if (txt == '赞') {
-            newTotal = oldTotal + 1;
-            praisesTotal.setAttribute('total', newTotal);
-            praisesTotal.innerHTML = (newTotal == 1) ? '我觉得很赞' : '我和' + oldTotal + '个人觉得很赞';
-            el.innerHTML = '取消赞';
+
+        if (txt == '取消赞') {
+            alert(zanCount + " -----" + isZan +"------" + userId + "---" + postId);
+            count = parseInt(zanCount) - 1;
+            praisesTotal.innerHTML = count + '个人觉得很赞';
+            el.innerHTML = '赞';
+
+
+            $.ajax({
+                type: "POST",
+                url: "/disZan",
+                contentType: 'application/x-www-form-urlencoded;charset=utf-8',
+                data: {"postId":postId, "uid":userId},
+                dataType: "json",
+                success: function(data){
+                    console.log(data);
+                },
+                error:function(e){
+                    console.log(e);
+                }
+            });
+
+
         }
         else {
-            newTotal = oldTotal - 1;
-            praisesTotal.setAttribute('total', newTotal);
-            praisesTotal.innerHTML = (newTotal == 0) ? '' : newTotal + '个人觉得很赞';
-            el.innerHTML = '赞';
+            count = parseInt(zanCount) + 1;
+            praisesTotal.innerHTML = count + '个人觉得很赞';
+            el.innerHTML = '取消赞';
+
+
+            $.ajax({
+                type: "POST",
+                url: "/zan",
+                contentType: 'application/x-www-form-urlencoded;charset=utf-8',
+                data: {"postId":postId, "uid":userId},
+                dataType: "json",
+                success: function(data){
+                    console.log(data);
+                },
+                error:function(e){
+                    console.log(e);
+                }
+            });
+
         }
-        praisesTotal.style.display = (newTotal == 0) ? 'none' : 'block';
+        praisesTotal.style.display = (count == 0) ? 'none' : 'block';
     }
 
     /**
@@ -60,13 +101,48 @@ window.onload = function () {
         commentBox.innerHTML =
             '<img class="myhead" src="/assets/img/zgr.jpg" alt=""/>' +
                 '<div class="comment-content">' +
-                '<p class="comment-text"><span class="user">我：</span>' + textarea.value + '</p>' +
+                '<p class="comment-text"><span class="user">' + nickName + '：</span>' + textarea.value + '</p>' +
                 '<p class="comment-time">' +
                 formateDate(new Date()) +
                 '<a href="javascript:;" class="comment-praise" total="0" my="0" style="">赞</a>' +
-                '<a href="javascript:;" class="comment-operate">删除</a>' +
                 '</p>' +
-                '</div>'
+                '</div>';
+
+        alert(textarea.value + "---" + postId + "--" + userId);
+        //向后台提交回复请求
+        var pid = postId;
+        var uid = userId;
+        var content = textarea.value;
+        var con = new Array();
+
+
+
+
+        if((content.substr(0,2).search("回复")) != -1 && (content.substr(0,14).search(":")) != -1){
+            var arr = content.split(":");
+            for(i = 1 ; i < arr.length; i++){
+                con.push(arr[i]);
+            }
+            var str = con.join("");
+            content = str;
+        }
+
+
+
+        $.ajax({
+            type: "POST",
+            url: "/replay",
+            contentType: 'application/x-www-form-urlencoded;charset=utf-8',
+            data: {"pid":pid, "uid":uid,"content":content},
+            dataType: "json",
+            success: function(data){
+                console.log(data);
+            },
+             error:function(e){
+                 console.log(e);
+             }
+    });
+
         commentList.appendChild(commentBox);
         textarea.value = '';
         textarea.onblur();
@@ -96,7 +172,7 @@ window.onload = function () {
     }
 
     /**
-     * 操作留言
+     * 操作留言   评论留言
      * @param el 点击的元素
      */
     function operate(el) {
@@ -107,11 +183,26 @@ window.onload = function () {
         var textarea = box.getElementsByClassName('comment')[0];
         if (txt == '回复') {
             textarea.focus();
-            textarea.value = '回复' + user;
+            textarea.value = '回复' + user.split(":")[0].trim() + ": ";
             textarea.onkeyup();
         }
         else {
+            alert(delId)
             removeNode(commentBox);
+            $.ajax({
+                type: "POST",
+                url: "/post/del",
+                contentType: 'application/x-www-form-urlencoded;charset=utf-8',
+                data: {"id":delId},
+                dataType: "json",
+                success: function(data){
+                    console.log(data);
+                },
+                error:function(e){
+                    console.log(e);
+                }
+            });
+
         }
     }
 
@@ -137,7 +228,7 @@ window.onload = function () {
                 //回复按钮蓝
                 case 'btn':
                     reply(el.parentNode.parentNode.parentNode, el);
-                    break
+                    break;
 
                 //回复按钮灰
                 case 'btn btn-off':
@@ -153,6 +244,11 @@ window.onload = function () {
                 case 'comment-operate':
                     operate(el);
                     break;
+
+                //操作留言
+                case 'comment-del':
+                    operate(el);
+                    break;
             }
         }
 
@@ -162,14 +258,15 @@ window.onload = function () {
         //评论获取焦点
         textArea.onfocus = function () {
             this.parentNode.className = 'text-box text-box-on';
-            this.value = this.value == '评论…' ? '' : this.value;
+            this.value = this.value.trim() == '评论…' ? '' : this.value.trim();
             this.onkeyup();
         }
 
         //评论失去焦点
         textArea.onblur = function () {
             var me = this;
-            var val = me.value;
+            var val = me.value.trim();
+
             if (val == '') {
                 timer = setTimeout(function () {
                     me.value = '评论…';
@@ -180,11 +277,12 @@ window.onload = function () {
 
         //评论按键事件
         textArea.onkeyup = function () {
-            var val = this.value;
+            var val = this.value.trim();
             var len = val.length;
             var els = this.parentNode.children;
             var btn = els[1];
             var word = els[2];
+
             if (len <=0 || len > 140) {
                 btn.className = 'btn btn-off';
             }
@@ -194,9 +292,29 @@ window.onload = function () {
             word.innerHTML = len + '/140';
         }
 
+
+
     }
 
 
 
 }
+
+function replayOther(postid,uid) {
+    postId = postid;
+    userId = uid;
+
+}
+function deletePost(postId) {
+    delId = postId;
+}
+
+function zan(count,is,uid,pid) {
+    zanCount = count;
+    isZan = is;
+    postId = pid;
+    userId = uid;
+
+}
+
 

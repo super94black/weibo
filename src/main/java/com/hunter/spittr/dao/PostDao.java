@@ -2,6 +2,7 @@ package com.hunter.spittr.dao;
 
 import com.hunter.spittr.meta.Post;
 import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
@@ -20,7 +21,7 @@ public interface PostDao {
 
 
     @Select("SELECT * FROM post WHERE pid = #{pid} and type =1 order by create_time desc")
-    List<Post> getAllPostByPid(int pid);
+    List<Post> getAllPostByPid(@Param("pid") int pid);
 
     @Select("SELECT * FROM post WHERE id = #{pid} and type = 1")
     Post getPostById(int pid);
@@ -35,4 +36,6 @@ public interface PostDao {
 
     @Update("update post set is_leaf = 0 where id = #{id}")
     void updatePostLeaf(int id);
+    @Update("update post set type = 0 where id = #{id}")
+    void deleteByPostId(int id);
 }

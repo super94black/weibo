@@ -5,11 +5,11 @@ import org.hibernate.validator.constraints.Email;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
-public class Spitter {
+public class User {
 
     private long id;
 
-    @Pattern(regexp = "^[a-zA-Z0-9_]{5,16}$", message = "{username.size}")
+    @Pattern(regexp = "^[a-zA-Z0-9_]{5,11}$", message = "{username.size}")
     private String username;
 
     @Size(min = 8, max = 25, message = "{password.size}")

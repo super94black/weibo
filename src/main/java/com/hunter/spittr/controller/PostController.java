@@ -39,4 +39,16 @@ public class PostController {
         else
             return Result.error();
     }
+
+    @RequestMapping("/post/del")
+    @ResponseBody
+    public Result deleteByPostId(int id){
+        try {
+            postService.deleteByPostId(id);
+        }catch (Exception e){
+            return Result.error();
+        }
+        return Result.ok();
+    }
+
 }

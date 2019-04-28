@@ -9,14 +9,32 @@ public class PostPo {
 
     private Post post;
     private String replayName;
-    private Spitter spitter;
+    private User user;
+    private int zanCount;
+    private int isZan;
 
-    public Spitter getSpitter() {
-        return spitter;
+    public int getZanCount() {
+        return zanCount;
     }
 
-    public void setSpitter(Spitter spitter) {
-        this.spitter = spitter;
+    public void setZanCount(int zanCount) {
+        this.zanCount = zanCount;
+    }
+
+    public int getIsZan() {
+        return isZan;
+    }
+
+    public void setIsZan(int isZan) {
+        this.isZan = isZan;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public Post getPost() {

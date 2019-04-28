@@ -5,6 +5,7 @@ a:hover { text-decoration: underline;}
 .clearfix:after { content:"."; display:block; height:0; clear:both; visibility:hidden}
 .clearfix { *height:1%;}
 #list { margin: 0 auto; text-align: left; width: 540px;}
+
 .box { border-top: 1px solid #eee; position: relative;  width: 540px; padding: 20px 0}
 .box:hover .close { display: block;}
 .close { display: none; top:0px; right: 0px; width: 28px; height: 28px; border: 1px solid #eee; position: absolute; background: #f2f4f7; line-height: 27px; text-align: center;}
@@ -27,6 +28,7 @@ a:hover { text-decoration: underline;}
 .comment-box .comment-content .comment-time { color: #ccc; margin-top: 3px; line-height: 16px; position: relative;}
 .comment-box .comment-content .comment-praise { display: none; color: #369; padding-left: 17px; height: 20px; background: url("/assets/img/praise.png") no-repeat;  position: absolute; bottom: 0px; right: 44px;}
 .comment-box .comment-content .comment-operate { display: none; color: #369; height: 20px;  position: absolute; bottom: 0px; right: 10px;}
+#del{display: none; color: #369; height: 20px;  position: absolute; bottom: 0px; right: 10px}
 .comment-box .comment-content:hover .comment-praise { display: inline-block;}
 .comment-box .comment-content:hover .comment-operate { display: inline-block;}
 .text-box .comment { border: 1px solid #eee; display: block; height: 15px; width: 428px; padding: 5px; resize: none; color: #ccc}

@@ -17,14 +17,14 @@ public interface SpittleDao {
 
     //获取指定分页的spittle列表
     @Select("SELECT le.id as id, message, time, userId, nickname, thumbnail " +
-            "FROM Spittle le LEFT JOIN Spitter er ON le.userId = er.id " +
+            "FROM Spittle le LEFT JOIN User er ON le.userId = er.id " +
             "ORDER BY time DESC")
 //    @Options(useGeneratedKeys = true)
     List<Spittle> getSpittleList();
 
     //获取某用户发布过的spittle列表
     @Select("SELECT le.id as id, message, time, userId, nickname, thumbnail " +
-            "FROM Spittle le LEFT JOIN Spitter er ON le.userId = er.id " +
+            "FROM Spittle le LEFT JOIN User er ON le.userId = er.id " +
             "WHERE le.userId = #{userId} " +
             "ORDER BY time DESC")
     List<Spittle> getSpittlesByUserId(@Param("userId") long userId);

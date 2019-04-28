@@ -13,17 +13,17 @@
     <div class="row">
         <div class="col-md-offset-5 col-md-2">
             <div class="thumbnail">
-                <img src="${spitter.headIcon}" alt="头像" class="img-responsive" id="updateIcon">
+                <img src="${user.headIcon}" alt="头像" class="img-responsive" id="updateIcon">
             </div>
         </div>
     </div>
     <div class="row">
         <div class="col-md-offset-5 col-md-2 text-center">
             <h2>
-                <c:out value="${nickname}"/><br>
+                <c:out value="${user.nickname}"/><br>
             </h2>
         </div>
-        <c:if test="${sessionScope.spitter.nickname} == ${nickname}">
+        <c:if test="${sessionScope.user.nickname} == ${nickname}">
             <div class="col-md-2"></div>
         </c:if>
     </div>
@@ -50,17 +50,17 @@
                 <br>
                 <div class="row">
                     <label class="col-md-2 col-md-offset-5 control-label">
-                        用户名：${spitter.username}
+                        用户名：${user.username}
                     </label>
                 </div>
                 <div class="row">
                     <label class="col-md-2 col-md-offset-5 control-label">
-                        昵称：${spitter.nickname}
+                        昵称：${user.nickname}
                     </label>
                 </div>
                 <div class="row">
                     <label class="col-md-2 col-md-offset-5 control-label">
-                        邮箱：${spitter.email}
+                        邮箱：${user.email}
                     </label>
                 </div>
             </div>

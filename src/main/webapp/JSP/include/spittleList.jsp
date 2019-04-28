@@ -3,41 +3,62 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 
 <div class="row">
+    <input type="hidden" id="nickName" value="${user.nickname}">
     <div id="list">
+
         <c:forEach items="${map}" var="dataMap">
         <div class="box clearfix">
             <c:set var="mapKey" value='${dataMap.key}'/>
-            <img class="head" src="${mapKey.spitter.headIcon}" alt=""/>
+            <img class="head" src="${mapKey.user.headIcon}" alt=""/>
             <div class="content">
                 <div class="main">
                     <p class="txt">
-                        <span class="user">${mapKey.spitter.username}：</span>${mapKey.post.content}
+                        <span class="user">${mapKey.user.nickname}：</span>${mapKey.post.content}
                     </p>
                     <img class="pic" src="${mapKey.post.img_add}" alt=""/>
                 </div>
                 <div class="info clearfix">
                     <span class="time">${mapKey.post.create_time}</span>
-                    <a class="praise" href="javascript:;">赞</a>
+                    <c:if test="${not empty user.id}">
+                    <c:if test="${mapKey.isZan eq '1'}">
+                    <a  href="javascript:void(0);" class="praise" onclick="zan('${mapKey.zanCount}','${mapKey.isZan}','${user.id}','${mapKey.post.id}')">取消赞</a>
+                    </c:if>
+                    <c:if test="${mapKey.isZan eq '0'}">
+                    <a  href="javascript:void(0);" class="praise" onclick="zan('${mapKey.zanCount}','${mapKey.isZan}','${user.id}','${mapKey.post.id}')">${mapKey.zanCount}赞</a>
+                    </c:if>
+                    </c:if>
+                    <c:if test="${mapKey.post.uid eq user.id}">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="javascript:void(0);" class="comment-operate" onclick="deletePost('${mapKey.post.id}')">删除</a>
+                    </c:if>
                 </div>
-                <div class="praises-total" total="0" style="display: none;"></div>
+                <div class="praises-total" total="0">${mapKey.zanCount}个人觉得很赞</div>
                 <div class="comment-list">
                     <%-- 评论开始--%>
                     <c:forEach items="${dataMap.value}" var="postvo">
-                    <div class="comment-box clearfix" user="other">
-                        <img class="myhead" src="${postvo.spitter.headIcon}" alt=""/>
+                    <div class="comment-box clearfix" class="other">
+                        <img class="myhead" src="${postvo.user.headIcon}" alt=""/>
                         <div class="comment-content">
+
                             <p class="comment-text"><span class="user">
                                 <c:if test="${not empty postvo.replayName}">
-                                ${postvo.spitter.username}:回复${postvo.replayName}
+                                ${postvo.user.nickname}:回复${postvo.replayName}:
                                 </c:if>
                                 <c:if test="${empty postvo.replayName}">
-                                    ${postvo.spitter.username}
+                                    ${postvo.user.nickname}:
                                 </c:if>
-                                ：</span>${postvo.post.content}</p>
+                                </span>${postvo.post.content}</p>
+
                             <p class="comment-time">
                                 ${postvo.post.create_time}
-                                <a href="javascript:;" class="comment-praise" total="0" my="0">赞</a>
-                                <a href="javascript:;" class="comment-operate">回复</a>
+                                    <c:if test="${postvo.post.uid eq user.id}">
+                                        <a href="javascript:void(0);"  class="comment-del"  onclick="deletePost('${postvo.post.id}')">删除</a>
+                                    </c:if>
+                                <%--<a href="javascript:void(0);" class="comment-praise" total="0" my="0">赞</a>--%>
+                                <c:if test="${not empty user.id}">
+                                <a href="javascript:void(0);" class="comment-operate" onclick="replayOther('${postvo.post.id}','${user.id}')">回复</a>
+                                </c:if>
+
                             </p>
                         </div>
                     </div>
@@ -46,13 +67,16 @@
                     <%--评论结束--%>
 
                 </div>
-
+                <c:if test="${not empty user.id}">
                 <div class="text-box">
-                    <textarea class="comment" autocomplete="off">评论…</textarea>
+                    <textarea class="comment" autocomplete="off" onclick="replayOther('${mapKey.post.id}','${user.id}')">评论…</textarea>
                     <button class="btn ">回 复</button>
                     <span class="word"><span class="length">0</span>/140</span>
                 </div>
+                </c:if>
+
             </div>
+
         </div>
         </c:forEach>
     </div>

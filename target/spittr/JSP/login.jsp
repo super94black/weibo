@@ -6,7 +6,7 @@
 <%@ include file="include/header.jsp" %>
 
 <br>
-<sf:form cssClass="form-horizontal" id="login" modelAttribute="spitter" method="post">
+<sf:form cssClass="form-horizontal" id="login" modelAttribute="user" action="login" method="post">
     <div class="form-group">
         <div class="col-md-2 col-md-offset-5">
             <!-- sf:input渲染成的html的type=text ,path属性值会渲染成value值 -->

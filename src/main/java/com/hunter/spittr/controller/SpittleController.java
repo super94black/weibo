@@ -3,7 +3,7 @@ package com.hunter.spittr.controller;
 import com.github.pagehelper.PageInfo;
 import com.hunter.spittr.meta.*;
 import com.hunter.spittr.service.PostService;
-import com.hunter.spittr.service.SpitterService;
+import com.hunter.spittr.service.UserService;
 import com.hunter.spittr.service.SpittleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,6 +12,7 @@ import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -25,16 +26,22 @@ public class SpittleController {
     @Resource
     private SpittleService spittleService;
     @Resource
-    private SpitterService spitterService;
+    private UserService spitterService;
     @Autowired
     private PostService postService;
 
     //获取动态列表
     @RequestMapping(value = "index",method = RequestMethod.GET)
     public String getSpittleList(@RequestParam(value = "pageNum", defaultValue = "1") int pageNum,
-                                 Model model) {
+                                 Model model, HttpSession session) {
 
-        PageVo<Post> pageVo = postService.getAllPost(pageNum,0);
+        User user = (User) session.getAttribute("user");
+        model.addAttribute("user",user);
+        int userId = 0;
+        if(null != user){
+            userId = (int) user.getId();
+        }
+        PageVo<Post> pageVo = postService.getAllPost(pageNum,0,userId);
         model.addAttribute("map",pageVo.getMap());
         model.addAttribute("pageInfo", pageVo.getPageInfo());
         return "index";
@@ -67,7 +74,7 @@ public class SpittleController {
         if (errors.hasErrors()) {
             return "index";
         }
-        Spitter spitter = (Spitter)session.getAttribute("spitter");
+        User spitter = (User)session.getAttribute("spitter");
         spittleService.publishSpittle(
                 new Spittle(spittle.getMessage(), new Date(), spitter.getId(),
                         spitter.getNickname(), spitter.getThumbnail()));
@@ -85,10 +92,10 @@ public class SpittleController {
                                      Model model) {
 
         //展示具体用户主页的基本信息
-        Spitter spitter = spitterService.getByUsername(username);
-        model.addAttribute("spitter", spitter);
+        User user = spitterService.getByUsername(username);
+        model.addAttribute("user", user);
 
-        PageInfo pageInfo = spittleService.getSpittlesByUserId(pageNum, spitter.getId());
+        PageInfo pageInfo = spittleService.getSpittlesByUserId(pageNum, user.getId());
         model.addAttribute("pageInfo", pageInfo);
 
         return "profile";

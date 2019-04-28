@@ -3,12 +3,13 @@ package com.hunter.spittr.service.impl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.hunter.spittr.dao.PostDao;
-import com.hunter.spittr.dao.SpitterDao;
+import com.hunter.spittr.dao.UserDao;
+import com.hunter.spittr.dao.ZanDao;
 import com.hunter.spittr.meta.*;
 import com.hunter.spittr.service.PostService;
-import javafx.geometry.Pos;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.Timestamp;
 import java.util.*;
@@ -25,7 +26,9 @@ public class PostServiceImpl implements PostService {
     @Autowired
     PostDao postDao;
     @Autowired
-    SpitterDao spitterDao;
+    UserDao userDao;
+    @Autowired
+    ZanDao zanDao;
 
 
     /**
@@ -34,7 +37,7 @@ public class PostServiceImpl implements PostService {
      * @return
      */
 
-    public PageVo<Post> getAllPost(int pageNum,int id){
+    public PageVo<Post>  getAllPost(int pageNum, int id, int userId){
         List<Post> list = new ArrayList<Post>();
         PageHelper.startPage(pageNum, 3);
         //startPage方法之后紧跟的查询 才是 分页查询
@@ -50,7 +53,13 @@ public class PostServiceImpl implements PostService {
         for (Post post : list) {
             PostPo postPo = new PostPo();
             List<PostPo> postPoList = new ArrayList<PostPo>();
-            postPo.setSpitter(spitterDao.getByUserId(post.getUid()));
+            postPo.setUser(userDao.getByUserId(post.getUid()));
+            postPo.setZanCount(zanDao.getZanCountByPostId(post.getId()));
+            Zan zan = zanDao.getZanByPostIdAndUid(post.getId(),userId);
+            if(null != zan)
+                postPo.setIsZan(1);
+            else
+                postPo.setIsZan(0);
             postPo.setPost(post);
             postPo.setReplayName(null);
             postPoList = getAllPost(postPoList,post);
@@ -77,15 +86,15 @@ public class PostServiceImpl implements PostService {
             if(p.getIs_leaf() == 0){
                 //如果不是叶子节点
                 PostPo postVo = new PostPo();
-                postVo.setSpitter(spitterDao.getByUserId(p.getUid()));
+                postVo.setUser(userDao.getByUserId(p.getUid()));
                 postVo.setPost(p);
                 Post parent1 = postDao.getPostById(p.getPid());
                 if(parent1.getRoot() == 1)
                     postVo.setReplayName(null);
                 else{
 
-                    Spitter spitter = spitterDao.getByUserId(parent1.getUid());
-                    postVo.setReplayName(spitter.getUsername());
+                    User spitter = userDao.getByUserId(parent1.getUid());
+                    postVo.setReplayName(spitter.getNickname());
                 }
                 plist.add(postVo);
                 getAllPost(plist,p);
@@ -93,20 +102,17 @@ public class PostServiceImpl implements PostService {
 
             }else {
                 PostPo postPo = new PostPo();
-                postPo.setSpitter(spitterDao.getByUserId(p.getUid()));
+                postPo.setUser(userDao.getByUserId(p.getUid()));
                 postPo.setPost(p);
                 Post parent = postDao.getPostById(p.getPid());
                 if(parent.getRoot() == 1)
                     postPo.setReplayName(null);
                 else{
-                    Spitter spitter = spitterDao.getByUserId(parent.getUid());
-                    postPo.setReplayName(spitter.getUsername());
+                    User spitter = userDao.getByUserId(parent.getUid());
+                    postPo.setReplayName(spitter.getNickname());
 
                 }
                 plist.add(postPo);
-
-
-                return plist;
             }
         }
 
@@ -164,6 +170,7 @@ public class PostServiceImpl implements PostService {
 
 
 
+    @Transactional
     public boolean replayPost(Post post){
 
         post.setCreate_time(new Timestamp(System.currentTimeMillis()));
@@ -177,8 +184,11 @@ public class PostServiceImpl implements PostService {
             postDao.updatePostLeaf(p.getId());
         }
         return true;
+    }
 
-
+    @Transactional
+    public void deleteByPostId(int id){
+        postDao.deleteByPostId(id);
     }
 
 }
