@@ -4,7 +4,7 @@
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="/spittr">Spittr</a>
+            <a class="navbar-brand" href="/index">微博</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <form class="navbar-form navbar-left">
@@ -20,21 +20,44 @@
                         首页
                     </a>
                 </li>
-                <%
 
-                %>
-                <c:if test="${empty cookie.get(userId)}">
-                    <li><a href="<c:url value="/login" />">登录</a>
+
+                <c:if test="${user.id eq 0 || user eq null}">
+                    <li><a href="<c:url value="/login" />">
+                        <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                        登录
+                    </a>
                     </li>
-                    <li><a href="<c:url value="/register"/>">注册</a></li>
+                    <li><a href="<c:url value="/register"/>">
+                        <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                        注册
+                    </a>
+                    </li>
                 </c:if>
-                <c:if test="${!empty cookie.get(userId)}">
+                <c:if test="${user.id ne 0 && user ne null}">
                     <li>
-                        <a href="<c:url value="/${sessionScope.spitter.nickname}" />">
+                        <a href="<c:url value="/user/${user.username}" />">
                             <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-                                ${sessionScope.spitter.nickname}
+                                ${user.nickname}
                         </a>
                     </li>
+                    <c:if test="${user.type eq 2 && user ne null}">
+                    <li>
+                        <a href="<c:url value="/admin/check" />">
+                            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                                审帖
+                        </a>
+                    </li>
+                    </c:if>
+
+                    <c:if test="${user.type eq 1 && user ne null}">
+                        <li>
+                            <a href="<c:url value="/post" />">
+                                <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                                发帖
+                            </a>
+                        </li>
+                    </c:if>
                     <li>
                         <a href="<c:url value="/logout"/>">
                             <span class="glyphicon glyphicon-off" aria-hidden="true"></span>

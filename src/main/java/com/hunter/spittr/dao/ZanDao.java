@@ -1,5 +1,6 @@
 package com.hunter.spittr.dao;
 
+import com.hunter.spittr.meta.HotTopic;
 import com.hunter.spittr.meta.Zan;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
@@ -24,5 +25,8 @@ public interface ZanDao {
     int getZanCountByPostId(int post_id);
     @Update("update zan set type = 0 where post_id = #{post_id} and uid = #{uid}")
     void delZanByPostIdAndUid(@Param("post_id") int post_id, @Param("uid") int uid);
+
+    @Select("select count(post_id) as count,post_id as postId from zan where type = 1 GROUP BY post_id limit 10")
+    List<HotTopic> getHotTopic();
 
 }

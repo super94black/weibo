@@ -12,6 +12,15 @@ public class PostPo {
     private User user;
     private int zanCount;
     private int isZan;
+    private Video video;
+
+    public Video getVideo() {
+        return video;
+    }
+
+    public void setVideo(Video video) {
+        this.video = video;
+    }
 
     public int getZanCount() {
         return zanCount;

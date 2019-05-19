@@ -2,9 +2,10 @@ body { font-size: 12px; line-height: 120%; text-align: center; color:#333; paddi
 a { color: #333; text-decoration: none;}
 a:hover { text-decoration: underline;}
 * { margin: 0; padding: 0; border: none;}
+.comment-row{margin-top: -450px; margin-left: 100px;}
 .clearfix:after { content:"."; display:block; height:0; clear:both; visibility:hidden}
 .clearfix { *height:1%;}
-#list { margin: 0 auto; text-align: left; width: 540px;}
+#list {  margin: 0 auto;  text-align: left; width: 540px;}
 
 .box { border-top: 1px solid #eee; position: relative;  width: 540px; padding: 20px 0}
 .box:hover .close { display: block;}

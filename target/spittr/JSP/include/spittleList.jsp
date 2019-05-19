@@ -2,28 +2,31 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 
-<div class="row">
+<div class="comment-row">
     <input type="hidden" id="nickName" value="${user.nickname}">
+    <input type="hidden" id="userImg" value="${user.headIcon}">
     <div id="list">
-
         <c:forEach items="${map}" var="dataMap">
         <div class="box clearfix">
             <c:set var="mapKey" value='${dataMap.key}'/>
-            <img class="head" src="${mapKey.user.headIcon}" alt=""/>
+            <a href="http://localhost:8080/user?uid=${mapKey.user.id}" id="aaaaa"><img class="head" src="${mapKey.user.headIcon}" alt=""/></a>
             <div class="content">
                 <div class="main">
                     <p class="txt">
                         <span class="user">${mapKey.user.nickname}：</span>${mapKey.post.content}
                     </p>
+                    <c:if test="${mapKey.post.img_add ne null}">
                     <img class="pic" src="${mapKey.post.img_add}" alt=""/>
+                    </c:if>
                 </div>
                 <div class="info clearfix">
                     <span class="time">${mapKey.post.create_time}</span>
-                    <c:if test="${not empty user.id}">
-                    <c:if test="${mapKey.isZan eq '1'}">
+
+                    <c:if test="${not empty user}">
+                    <c:if test="${mapKey.isZan eq 1}">
                     <a  href="javascript:void(0);" class="praise" onclick="zan('${mapKey.zanCount}','${mapKey.isZan}','${user.id}','${mapKey.post.id}')">取消赞</a>
                     </c:if>
-                    <c:if test="${mapKey.isZan eq '0'}">
+                    <c:if test="${mapKey.isZan eq 0}">
                     <a  href="javascript:void(0);" class="praise" onclick="zan('${mapKey.zanCount}','${mapKey.isZan}','${user.id}','${mapKey.post.id}')">${mapKey.zanCount}赞</a>
                     </c:if>
                     </c:if>
@@ -37,7 +40,7 @@
                     <%-- 评论开始--%>
                     <c:forEach items="${dataMap.value}" var="postvo">
                     <div class="comment-box clearfix" class="other">
-                        <img class="myhead" src="${postvo.user.headIcon}" alt=""/>
+                        <a href="http://localhost:8080/user?uid=${postvo.user.id}"><img class="myhead" src="${postvo.user.headIcon}" alt=""/></a>
                         <div class="comment-content">
 
                             <p class="comment-text"><span class="user">
@@ -67,13 +70,12 @@
                     <%--评论结束--%>
 
                 </div>
-                <c:if test="${not empty user.id}">
+
                 <div class="text-box">
                     <textarea class="comment" autocomplete="off" onclick="replayOther('${mapKey.post.id}','${user.id}')">评论…</textarea>
                     <button class="btn ">回 复</button>
                     <span class="word"><span class="length">0</span>/140</span>
                 </div>
-                </c:if>
 
             </div>
 
@@ -81,3 +83,5 @@
         </c:forEach>
     </div>
 </div>
+
+<script type="text/javascript" src="/assets/js/main.js"></script>

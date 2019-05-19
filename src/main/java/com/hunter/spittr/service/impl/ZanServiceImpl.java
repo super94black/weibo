@@ -1,6 +1,7 @@
 package com.hunter.spittr.service.impl;
 
 import com.hunter.spittr.dao.ZanDao;
+import com.hunter.spittr.meta.HotTopic;
 import com.hunter.spittr.meta.Zan;
 import com.hunter.spittr.service.ZanService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.Timestamp;
+import java.util.List;
 
 /**
  * @Author zhang
@@ -33,5 +35,10 @@ public class ZanServiceImpl implements ZanService {
     @Transactional
     public void delZanByPostIdAndUid(int postId, int uid){
         zanDao.delZanByPostIdAndUid(postId,uid);
+    }
+
+    @Transactional
+    public List<HotTopic> getHotTopic() throws Exception{
+        return zanDao.getHotTopic();
     }
 }

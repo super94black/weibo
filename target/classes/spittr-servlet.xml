@@ -48,6 +48,7 @@
           class="org.springframework.web.multipart.support.StandardServletMultipartResolver"/>
 
 
+
     <bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
         <property name="viewResolvers">
             <list>

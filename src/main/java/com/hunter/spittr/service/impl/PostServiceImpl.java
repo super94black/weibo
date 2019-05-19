@@ -4,9 +4,11 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.hunter.spittr.dao.PostDao;
 import com.hunter.spittr.dao.UserDao;
+import com.hunter.spittr.dao.VideoDao;
 import com.hunter.spittr.dao.ZanDao;
 import com.hunter.spittr.meta.*;
 import com.hunter.spittr.service.PostService;
+import com.hunter.spittr.service.VideoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -29,26 +31,40 @@ public class PostServiceImpl implements PostService {
     UserDao userDao;
     @Autowired
     ZanDao zanDao;
+    @Autowired
+    VideoService videoService;
+    @Autowired
+    VideoDao videoDao;
+
 
 
     /**
      * 获取全部动态，这个代码是构造回复List
-     * @param id
+     * @param
      * @return
      */
 
-    public PageVo<Post>  getAllPost(int pageNum, int id, int userId){
+    public PageVo<Post>  getAllPost(int pageNum, int userId,int type){
         List<Post> list = new ArrayList<Post>();
         PageHelper.startPage(pageNum, 3);
         //startPage方法之后紧跟的查询 才是 分页查询
-        list = postDao.getAllPostByPid(id);
+        if(userId != 0 && type == 1){
+            //type == 1 userId != 0说明查询的是该用户所发送所有动态
+            list = postDao.getAllPostByUid(userId);
+        }else if(type == 0)
+            //type == 0 说明无论用户登陆与否查询的是所有人的动态
+            list = postDao.getAllPostByPid();
         //使用pageInfo包装查询后的结果，只需将pageInfo交给页面即可
         PageInfo<Post> pageInfo = new PageInfo<Post>(list);
 
         PageVo<Post> pageVo = new PageVo<Post>();
         Map<PostPo, List<PostPo>> map = new HashMap<PostPo, List<PostPo>>();
-        if(null == list || list.size() == 0)
-            return null;
+        if(null == list || list.size() == 0){
+            pageVo.setMap(map);
+            pageVo.setPageInfo(pageInfo);
+            return pageVo;
+        }
+
 
         for (Post post : list) {
             PostPo postPo = new PostPo();
@@ -56,6 +72,7 @@ public class PostServiceImpl implements PostService {
             postPo.setUser(userDao.getByUserId(post.getUid()));
             postPo.setZanCount(zanDao.getZanCountByPostId(post.getId()));
             Zan zan = zanDao.getZanByPostIdAndUid(post.getId(),userId);
+
             if(null != zan)
                 postPo.setIsZan(1);
             else
@@ -189,6 +206,78 @@ public class PostServiceImpl implements PostService {
     @Transactional
     public void deleteByPostId(int id){
         postDao.deleteByPostId(id);
+    }
+
+    @Transactional
+    public void post(Integer uid,String imgAdd,String vodAdd,String content)throws Exception{
+        Post post = new Post();
+        post.setUid(uid);
+        post.setImg_add(imgAdd);
+        post.setContent(content);
+        post.setType(0);
+        post.setCreate_time(new Timestamp(System.currentTimeMillis()));
+        post.setUpdate_time(new Timestamp(System.currentTimeMillis()));
+        post.setPid(0);
+        post.setIs_leaf(1);
+        post.setRoot(1);
+
+        postDao.post(post);
+        System.out.println(post.getId());
+
+        if(null != vodAdd && !"".equals(vodAdd)){
+            Video video = new Video();
+            video.setPid(post.getId());
+            video.setName(vodAdd);
+            video.setCreate_time(new Timestamp(System.currentTimeMillis()));
+            video.setUpdate_time(new Timestamp(System.currentTimeMillis()));
+            video.setType(1);
+            videoService.addVideo(video);
+        }
+    }
+
+
+    /**
+     * 管理员获取所有没有审核的帖子
+     * @return
+     * @throws Exception
+     */
+    @Transactional
+    public List<PostPo> getUncheckedPost(){
+        List<PostPo> uncheckedList = new ArrayList<PostPo>();
+        try {
+
+            List<Post> list = postDao.getUncheckedPost();
+            if(null != list && list.size() != 0){
+                for (Post post:list) {
+                    PostPo postPo = new PostPo();
+                    postPo.setUser(userDao.getByUserId(post.getUid()));
+                    postPo.setPost(post);
+                    Video video = videoDao.getVideoByPid(post.getId());
+                    if(null != video && !video.getName().isEmpty())
+                        postPo.setVideo(video);
+                    uncheckedList.add(postPo);
+
+                }
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        return uncheckedList;
+    }
+    @Transactional
+    public void updateByPostId(int pid) throws Exception{
+        postDao.updateByPostId(pid);
+    }
+
+    @Transactional
+    public List<Post> getHotTopic() throws Exception{
+        List<HotTopic> list = zanDao.getHotTopic();
+        List<Post> postList = new ArrayList<Post>();
+        for (HotTopic hotTopic : list) {
+            postList.add(postDao.getPostById(hotTopic.getPostId()));
+        }
+        return postList;
     }
 
 }

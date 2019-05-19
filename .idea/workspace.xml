@@ -7,63 +7,119 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4dd7b05e-515d-4015-8a21-0f661dc66057" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/ZanController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/dao/ZanDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/meta/Zan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/ZanService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/ZanServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/AdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/PageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/dao/VideoDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/meta/HotTopic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/meta/Image.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/meta/Video.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/VideoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/VideoServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/JSP/check.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/JSP/hotTopic.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/JSP/post.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/JSP/userPostList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/hotTopic.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/img/weibo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/admin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/headIcon/weibo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/loading.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/PostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/SpitterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/SpittleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/SpittleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/SpittleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/dao/PostDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/dao/PostDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/dao/SpitterDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/dao/SpittleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/dao/SpittleDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/dao/ZanDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/dao/ZanDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/meta/PostPo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/meta/PostPo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/meta/Spitter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/meta/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/meta/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/meta/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/PostService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/SpitterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/ZanService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/ZanService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/PostServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/PostServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/SpitterServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/ZanServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/ZanServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/util/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hunter/spittr/util/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ValidationMessages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ValidationMessages.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/spittr-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spittr-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/JSP/include/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/JSP/include/footer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/JSP/include/head.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/JSP/include/head.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/JSP/include/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/JSP/include/header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/JSP/include/spittleList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/JSP/include/spittleList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/JSP/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/JSP/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/JSP/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/JSP/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/JSP/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/JSP/profile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/JSP/registerForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/JSP/registerForm.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/JSP/spittle.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/headIcon/1527838235148.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/headIcon/1527871166571.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/headIcon/1527871238467.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/headIcon/1528105000226.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/headIcon/1528125106804.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/thumbnails/headIcon/1527838235148.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/thumbnails/headIcon/1527871166571.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/thumbnails/headIcon/1527871238467.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/thumbnails/headIcon/1528105000226.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/thumbnails/headIcon/1528125106804.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ValidationMessages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ValidationMessages.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/hunter/spittr/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hunter/spittr/controller/LoginController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/hunter/spittr/controller/PostController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hunter/spittr/controller/PostController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hunter/spittr/controller/SpitterController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hunter/spittr/controller/SpittleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hunter/spittr/controller/SpittleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hunter/spittr/controller/SpittleController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/hunter/spittr/dao/PostDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hunter/spittr/dao/PostDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hunter/spittr/dao/SpitterDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hunter/spittr/dao/SpittleDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hunter/spittr/dao/SpittleDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/hunter/spittr/meta/PostPo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hunter/spittr/meta/PostPo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hunter/spittr/meta/Spitter.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/hunter/spittr/service/PostService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hunter/spittr/service/PostService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hunter/spittr/service/SpitterService.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/hunter/spittr/service/impl/PostServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hunter/spittr/service/impl/PostServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hunter/spittr/service/impl/SpitterServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hunter/spittr/util/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hunter/spittr/util/Result.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spittr-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spittr-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spittr/JSP/include/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/spittr/JSP/include/footer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spittr/JSP/include/head.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/spittr/JSP/include/head.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/spittr/JSP/include/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/spittr/JSP/include/header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/spittr/JSP/include/spittleList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/spittr/JSP/include/spittleList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spittr/JSP/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/spittr/JSP/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/spittr/JSP/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/spittr/JSP/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/spittr/JSP/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/spittr/JSP/profile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spittr/JSP/registerForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/spittr/JSP/registerForm.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spittr/JSP/spittle.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/ValidationMessages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/ValidationMessages.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/com/hunter/spittr/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/com/hunter/spittr/controller/LoginController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/com/hunter/spittr/controller/PostController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/com/hunter/spittr/controller/PostController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/com/hunter/spittr/controller/SpitterController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/com/hunter/spittr/controller/SpittleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/com/hunter/spittr/controller/SpittleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/com/hunter/spittr/controller/SpittleController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/com/hunter/spittr/dao/PostDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/com/hunter/spittr/dao/PostDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/com/hunter/spittr/dao/SpitterDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/com/hunter/spittr/dao/SpittleDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/com/hunter/spittr/dao/SpittleDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/com/hunter/spittr/meta/PostPo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/com/hunter/spittr/meta/PostPo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/com/hunter/spittr/meta/Spitter.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/com/hunter/spittr/service/PostService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/com/hunter/spittr/service/PostService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/com/hunter/spittr/service/SpitterService.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/com/hunter/spittr/service/impl/PostServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/com/hunter/spittr/service/impl/PostServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/com/hunter/spittr/service/impl/SpitterServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/com/hunter/spittr/util/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/com/hunter/spittr/util/Result.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/spittr-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/classes/spittr-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spittr/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/spittr/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/spittr/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/spittr/assets/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/spittr/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/spittr/assets/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spittr/images/headIcon/1527838235148.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spittr/images/headIcon/1527871166571.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spittr/images/headIcon/1527871238467.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spittr/images/headIcon/1528105000226.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spittr/images/headIcon/1528125106804.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spittr/images/headIcon/1556162893538.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spittr/images/headIcon/1556169158641.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spittr/images/headIcon/1556170433941.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spittr/images/headIcon/1556170541226.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spittr/images/headIcon/1556170739665.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spittr/images/headIcon/1556171102710.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spittr/images/thumbnails/headIcon/1527838235148.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spittr/images/thumbnails/headIcon/1527871166571.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spittr/images/thumbnails/headIcon/1527871238467.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spittr/images/thumbnails/headIcon/1528105000226.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spittr/images/thumbnails/headIcon/1528125106804.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spittr/images/thumbnails/headIcon/1556162893538.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spittr/images/thumbnails/headIcon/1556169158641.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spittr/images/thumbnails/headIcon/1556170433941.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spittr/images/thumbnails/headIcon/1556170541226.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spittr/images/thumbnails/headIcon/1556170739665.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spittr/images/thumbnails/headIcon/1556171102710.jpg" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -93,56 +149,83 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/IndexController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="206">
+              <caret line="52" selection-start-line="52" selection-end-line="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/include/head.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/userPostList.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="9" column="38" lean-forward="true" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/registerForm.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="511">
+              <caret line="104" column="27" selection-start-line="104" selection-start-column="27" selection-end-line="104" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/include/header.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/hotTopic.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="8" column="36" lean-forward="true" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/check.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="19" column="53" lean-forward="true" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="61" column="15" lean-forward="true" selection-start-line="61" selection-start-column="15" selection-end-line="61" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/PostController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/dao/PostDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
-              <caret line="22" column="51" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/dao/ZanDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="25" column="29" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/ZanService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" column="58" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
+            <state relative-caret-position="194">
+              <caret line="262" column="20" selection-start-line="262" selection-start-column="20" selection-end-line="262" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -150,56 +233,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/include/spittleList.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="23" column="78" selection-start-line="23" selection-start-column="75" selection-end-line="23" selection-end-column="78" />
-              <folding>
-                <element signature="e#1310#1316#0#HTML" expanded="true" />
-                <element signature="e#1316#1322#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/ZanController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="32" column="43" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/SpittleController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="43" column="49" selection-start-line="43" selection-start-column="49" selection-end-line="43" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/LoginController.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="147">
-              <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/ZanServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#906#907#0" expanded="true" />
-                <element signature="e#951#952#0" expanded="true" />
-              </folding>
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -212,20 +247,16 @@
         <option value="jsf" />
         <option value="spring-beans.schema" />
         <option value="HTML File" />
-        <option value="Jsp File" />
         <option value="Interface" />
+        <option value="Jsp File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>file</find>
-      <find>mkdir</find>
-      <find>location</find>
-      <find>login</find>
-      <find>btn</find>
-      <find>position</find>
       <find>fmipt</find>
       <find>byusername</find>
       <find>userId</find>
@@ -250,12 +281,19 @@
       <find>username</find>
       <find>comment-praise</find>
       <find>remove</find>
+      <find>reply</find>
+      <find>email</find>
+      <find>spitterService</find>
+      <find>usernameError</find>
+      <find>row</find>
+      <find>.row</find>
     </findStrings>
     <replaceStrings>
       <replace>username</replace>
       <replace>List</replace>
       <replace>user</replace>
       <replace>nickname</replace>
+      <replace>userService</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\Users\Hunter\Desktop\spittr\target</dir>
@@ -267,56 +305,56 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/util/Md5Util.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/CSS/style.css" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/util/PagingUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/bootstrap.min.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/style.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/JSP/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/JSP/include/paging.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/JSP/include/footer.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/JSP/include/userInfo.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/JSP/registerForm.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/meta/Spitter.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/db.properties" />
-        <option value="$PROJECT_DIR$/src/main/webapp/html/404page.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/dao/SpitterDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/SpitterServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/SpitterService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/SpitterController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/util/JsonUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/meta/PostVo.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/root-context.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/meta/Post.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/JSP/include/head.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/util/Result.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/SpittleService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/SpittleServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/meta/PageVo.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/JSP/include/header.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/JSP/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/dao/SpittleDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/JSP/profile.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/meta/Image.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/meta/User.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/assets/css/main.css" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/PostController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/meta/Zan.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/assets/js/index.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/JSP/profile.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/ValidationMessages.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/spittr-servlet.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/JSP/registerForm.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/JSP/include/post.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/meta/Video.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/VideoService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/VideoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/JSP/uploadVideo.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/fileinput.min.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/fileinput.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/zh.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/my.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/JSP/spittle.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/JSP/userPostList.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/JSP/post.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/meta/PostPo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/SpittleController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/PostService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/dao/VideoDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/dao/UserDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/AdminController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/dao/PostDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/PostServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/JSP/include/spittleList.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/JSP/check.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/assets/js/admin.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/JSP/hotArtcle.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/PageController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/JSP/include/header.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/assets/css/main.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/assets/css/hotTopic.css" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/meta/HotTopic.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/dao/ZanDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/ZanServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/ZanService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/ZanController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/PostServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/PostService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/PostController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/IndexController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/JSP/include/head.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/JSP/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/JSP/include/spittleList.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/JSP/hotTopic.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/assets/js/main.js" />
       </list>
     </option>
@@ -354,11 +392,11 @@
   <component name="MavenRunner">
     <option name="skipTests" value="true" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="689" />
-    <option name="y" value="125" />
-    <option name="width" value="887" />
-    <option name="height" value="528" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="550" />
+    <option name="y" value="88" />
+    <option name="width" value="780" />
+    <option name="height" value="517" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -394,6 +432,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -507,6 +546,13 @@
               <item name="spittr" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spittr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spittr" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -541,6 +587,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spittr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spittr" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -564,15 +618,15 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556446708256" />
-    <property name="last_opened_file_path" value="D:/webwork/暑期陪培训/weixin-v1.2-2017-08-26" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558290427042" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.15" />
@@ -585,19 +639,21 @@
       <recent name="com.hunter.spittr.controller.exception" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\毕业设计\spittr\src\main\webapp" />
-      <recent name="C:\Users\Hunter\Desktop\spittr\src\main\webapp\js" />
-      <recent name="C:\Users\Hunter\Desktop\spittr\src\main\webapp\CSS" />
+      <recent name="E:\毕业设计\spittr\target\spittr" />
+      <recent name="E:\毕业设计\spittr\src\main\webapp\img" />
+      <recent name="E:\毕业设计\spittr\target\spittr\images\thumbnails\headIcon" />
+      <recent name="E:\毕业设计\spittr\target\spittr\images\headIcon" />
+      <recent name="E:\毕业设计\spittr\src\main\webapp\images\headIcon" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.hunter.spittr.util" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\毕业设计\spittr\src\main\webapp\JSP" />
       <recent name="C:\Users\Hunter\Desktop\spittr\src\main\resources" />
       <recent name="C:\Users\Hunter\Desktop\spittr\src\main\resources\validation" />
       <recent name="C:\Users\Hunter\Desktop\spittr\src\main\java\com\hunter\spittr\meta" />
       <recent name="C:\Users\Hunter\Desktop\spittr\src\main\java" />
-      <recent name="C:\Users\Hunter\Desktop\spittr\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -832,30 +888,34 @@
       <workItem from="1556292392595" duration="393000" />
       <workItem from="1556293089337" duration="3610000" />
       <workItem from="1556337120655" duration="22785000" />
-      <workItem from="1556434168784" duration="11732000" />
+      <workItem from="1556434168784" duration="17121000" />
+      <workItem from="1556509724976" duration="22813000" />
+      <workItem from="1556884766942" duration="7326000" />
+      <workItem from="1557031072287" duration="2418000" />
+      <workItem from="1558161228576" duration="44426000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="482289000" />
+    <option name="totallyTimeSpent" value="564661000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.84602916" visible="true" weight="0.32980332" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8430335" visible="true" weight="0.27987897" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Image Layers" order="4" />
-      <window_info id="Web" order="5" sideWeight="0.15397082" side_tool="true" weight="0.2730711" />
+      <window_info id="Web" order="5" sideWeight="0.15696649" side_tool="true" visible="true" weight="0.27987897" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Designer" order="7" />
       <window_info id="JRebel" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32840723" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49092284" visible="true" weight="0.049261082" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49924356" weight="0.049261082" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49394855" weight="0.8095238" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49924356" visible="true" weight="0.06896552" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295082" />
@@ -869,7 +929,7 @@
       <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="15" />
       <window_info anchor="bottom" id="Problems" order="16" weight="0.32840723" />
-      <window_info anchor="bottom" id="JRebel remote servers log" order="17" sideWeight="0.50075644" side_tool="true" weight="0.452459" />
+      <window_info anchor="bottom" id="JRebel remote servers log" order="17" sideWeight="0.5060514" side_tool="true" weight="0.42200327" />
       <window_info anchor="bottom" id="JRebel Executor" order="18" weight="0.4885246" />
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="Palette&#9;" order="1" />
@@ -938,112 +998,58 @@
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/UserController.java</url>
-          <line>88</line>
-          <properties />
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/LoginController.java</url>
-          <line>42</line>
-          <properties />
-          <option name="timeStamp" value="68" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/UserServiceImpl.java</url>
-          <line>29</line>
-          <properties />
-          <option name="timeStamp" value="69" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/LoginController.java</url>
-          <line>50</line>
-          <properties />
-          <option name="timeStamp" value="70" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/SpittleController.java</url>
-          <line>94</line>
-          <properties />
-          <option name="timeStamp" value="71" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/LoginController.java</url>
-          <line>57</line>
-          <properties />
-          <option name="timeStamp" value="74" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/LoginController.java</url>
-          <line>56</line>
-          <properties />
-          <option name="timeStamp" value="75" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/LoginController.java</url>
-          <line>26</line>
-          <properties />
-          <option name="timeStamp" value="77" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/LoginController.java</url>
-          <line>29</line>
-          <properties />
-          <option name="timeStamp" value="78" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/LoginController.java</url>
-          <line>31</line>
-          <properties />
-          <option name="timeStamp" value="79" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/SpittleController.java</url>
-          <line>98</line>
-          <properties />
-          <option name="timeStamp" value="80" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/SpittleController.java</url>
-          <line>44</line>
-          <properties />
-          <option name="timeStamp" value="85" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/PostServiceImpl.java</url>
-          <line>54</line>
-          <properties />
-          <option name="timeStamp" value="86" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/PostServiceImpl.java</url>
-          <line>64</line>
-          <properties />
-          <option name="timeStamp" value="87" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/PostServiceImpl.java</url>
-          <line>83</line>
-          <properties />
-          <option name="timeStamp" value="88" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/PostServiceImpl.java</url>
-          <line>105</line>
-          <properties />
-          <option name="timeStamp" value="89" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/PostServiceImpl.java</url>
-          <line>114</line>
+          <line>131</line>
           <properties />
           <option name="timeStamp" value="90" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/PostServiceImpl.java</url>
-          <line>115</line>
+          <line>132</line>
           <properties />
           <option name="timeStamp" value="91" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/UserController.java</url>
+          <line>70</line>
+          <properties />
+          <option name="timeStamp" value="95" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/UserController.java</url>
+          <line>66</line>
+          <properties />
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/PostServiceImpl.java</url>
+          <line>73</line>
+          <properties />
+          <option name="timeStamp" value="98" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/PostServiceImpl.java</url>
+          <line>85</line>
+          <properties />
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/VideoServiceImpl.java</url>
+          <line>22</line>
+          <properties />
+          <option name="timeStamp" value="109" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/PostController.java</url>
+          <line>70</line>
+          <properties />
+          <option name="timeStamp" value="113" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/PostServiceImpl.java</url>
+          <line>269</line>
+          <properties />
+          <option name="timeStamp" value="115" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1062,137 +1068,57 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/util/JsonUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/VideoService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="231">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/exception/SpittleNotFoundException.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/meta/Video.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/img/img4.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/img/praise.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8/src.zip!/java/sql/Timestamp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="109" column="11" selection-start-line="109" selection-start-column="11" selection-end-line="109" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/util/Result.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/github/pagehelper/pagehelper/5.1.4/pagehelper-5.1.4.jar!/com/github/pagehelper/PageInfo.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        <state relative-caret-position="-146">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding>
-            <element signature="e#919#920#0" expanded="true" />
-            <element signature="e#948#949#0" expanded="true" />
+            <element signature="e#327#328#0" expanded="true" />
+            <element signature="e#352#353#0" expanded="true" />
+            <element signature="e#385#386#0" expanded="true" />
+            <element signature="e#413#414#0" expanded="true" />
+            <element signature="e#440#441#0" expanded="true" />
+            <element signature="e#466#467#0" expanded="true" />
+            <element signature="e#501#502#0" expanded="true" />
+            <element signature="e#531#532#0" expanded="true" />
+            <element signature="e#562#563#0" expanded="true" />
+            <element signature="e#589#590#0" expanded="true" />
+            <element signature="e#629#630#0" expanded="true" />
+            <element signature="e#661#662#0" expanded="true" />
+            <element signature="e#702#703#0" expanded="true" />
+            <element signature="e#736#737#0" expanded="true" />
+            <element signature="e#793#794#0" expanded="true" />
+            <element signature="e#839#840#0" expanded="true" />
+            <element signature="e#880#881#0" expanded="true" />
+            <element signature="e#914#915#0" expanded="true" />
+            <element signature="e#971#972#0" expanded="true" />
+            <element signature="e#1017#1018#0" expanded="true" />
+            <element signature="e#1045#1046#0" expanded="true" />
+            <element signature="e#1072#1073#0" expanded="true" />
+            <element signature="e#1109#1110#0" expanded="true" />
+            <element signature="e#1141#1142#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/github/pagehelper/pagehelper/5.1.4/pagehelper-5.1.4.jar!/com/github/pagehelper/PageHelper.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/meta/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-504">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        <state relative-caret-position="336">
+          <caret line="20" column="27" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spittr-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/root-context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/include/head.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/registerForm.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="32" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/spittle.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="8" column="67" selection-start-line="8" selection-start-column="67" selection-end-line="8" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/SpittleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/include/header.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/profile.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="62" column="36" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/uploadVideo.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
-          <caret line="5382" column="4" selection-start-line="5382" selection-start-column="4" selection-end-line="5382" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="30" selection-start-line="30" selection-end-line="30" selection-end-column="93" />
+          <caret line="57" column="92" selection-start-line="57" selection-start-column="92" selection-end-line="57" selection-end-column="92" />
         </state>
       </provider>
     </entry>
@@ -1203,33 +1129,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/dao/SpittleDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/profile.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="26" column="25" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="25" />
+        <state relative-caret-position="210">
+          <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/dao/UserDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="36" column="11" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
+        <state relative-caret-position="499">
+          <caret line="4" column="21834" selection-start-line="4" selection-start-column="21834" selection-end-line="4" selection-end-column="21834" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/meta/Spittle.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="235">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/meta/PageVo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="19" column="47" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
+        <state relative-caret-position="189">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#412#413#0" expanded="true" />
             <element signature="e#438#439#0" expanded="true" />
             <element signature="e#495#496#0" expanded="true" />
             <element signature="e#525#526#0" expanded="true" />
@@ -1237,94 +1164,157 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/meta/PostVo.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/dao/VideoDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        <state relative-caret-position="273">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/meta/PostPo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+        <state relative-caret-position="147">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
-            <element signature="e#305#306#0" expanded="true" />
-            <element signature="e#350#351#0" expanded="true" />
-            <element signature="e#390#391#0" expanded="true" />
-            <element signature="e#419#420#0" expanded="true" />
-            <element signature="e#447#448#0" expanded="true" />
-            <element signature="e#486#487#0" expanded="true" />
-            <element signature="e#520#521#0" expanded="true" />
-            <element signature="e#222#223#0" expanded="true" />
-            <element signature="e#249#250#0" expanded="true" />
-            <element signature="e#287#288#0" expanded="true" />
-            <element signature="e#319#320#0" expanded="true" />
+            <element signature="e#298#299#0" expanded="true" />
+            <element signature="e#326#327#0" expanded="true" />
+            <element signature="e#367#368#0" expanded="true" />
+            <element signature="e#401#402#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/meta/Zan.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/post.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        <state relative-caret-position="487">
+          <caret line="59" column="30" selection-start-line="59" selection-start-column="30" selection-end-line="59" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/meta/User.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
+        <state relative-caret-position="148">
+          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
           <folding>
-            <element signature="e#901#902#0" expanded="true" />
-            <element signature="e#926#927#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/UserController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="52" column="36" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
+        <state relative-caret-position="105">
+          <caret line="14" column="82" selection-start-line="14" selection-start-column="82" selection-end-line="14" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-189" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/my.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-168">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.0.6.RELEASE/spring-aop-5.0.6.RELEASE.jar!/org/springframework/aop/support/AopUtils.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="195" selection-start-line="195" selection-end-line="195" />
+        <state relative-caret-position="106">
+          <caret line="193" selection-start-line="193" selection-end-line="193" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.0.6.RELEASE/spring-aop-5.0.6.RELEASE.jar!/org/springframework/aop/framework/JdkDynamicAopProxy.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/AdminController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="137" selection-start-line="137" selection-end-line="137" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="61" column="36" selection-start-line="61" selection-start-column="36" selection-end-line="61" selection-end-column="36" />
+        <state relative-caret-position="164">
+          <caret line="46" column="40" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
           <folding>
-            <element signature="e#962#963#0" expanded="true" />
-            <element signature="e#1016#1017#0" expanded="true" />
-            <element signature="e#1085#1086#0" expanded="true" />
-            <element signature="e#1139#1140#0" expanded="true" />
-            <element signature="e#1740#1741#0" expanded="true" />
-            <element signature="e#1784#1785#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/PageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/js/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/include/paging.jsp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.6.RELEASE/spring-web-5.0.6.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43">
-          <caret line="121" selection-start-line="121" selection-end-line="121" />
+        <state relative-caret-position="126">
+          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/css/hotTopic.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-166">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/meta/Zan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/meta/HotTopic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+          <folding>
+            <element signature="e#192#193#0" expanded="true" />
+            <element signature="e#220#221#0" expanded="true" />
+            <element signature="e#259#260#0" expanded="true" />
+            <element signature="e#293#294#0" expanded="true" />
+            <element signature="e#323#324#0" expanded="true" />
+            <element signature="e#352#353#0" expanded="true" />
+            <element signature="e#393#394#0" expanded="true" />
+            <element signature="e#429#430#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/dao/PostDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="43" column="9" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/ZanController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1335,135 +1325,179 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/meta/Post.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/VideoServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="84" selection-start-line="84" selection-end-line="84" />
+        <state relative-caret-position="364">
+          <caret line="22" column="21" lean-forward="true" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1379#1380#0" expanded="true" />
+            <element signature="e#571#572#0" expanded="true" />
+            <element signature="e#611#612#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/PostService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
+        <state relative-caret-position="511">
+          <caret line="66" column="41" selection-start-line="66" selection-start-column="41" selection-end-line="66" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/PostServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-416">
-          <caret line="41" column="39" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#873#879#0" expanded="true" />
-            <element signature="e#1213#1219#0" expanded="true" />
-            <element signature="e#1438#1446#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/SpittleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="43" column="49" selection-start-line="43" selection-start-column="49" selection-end-line="43" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/dao/PostDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="22" column="51" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/include/spittleList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="23" column="78" selection-start-line="23" selection-start-column="75" selection-end-line="23" selection-end-column="78" />
-          <folding>
-            <element signature="e#1310#1316#0#HTML" expanded="true" />
-            <element signature="e#1316#1322#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/dao/ZanDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="25" column="29" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/PostController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="326">
+          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/ZanServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#906#907#0" expanded="true" />
-            <element signature="e#951#952#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="319">
+          <caret line="40" column="25" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/ZanService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="58" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/ZanController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="32" column="43" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
+        <state relative-caret-position="315">
+          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/meta/PostVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/impl/PostServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="273" column="52" selection-start-line="273" selection-start-column="4" selection-end-line="273" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#7322#7330#0" expanded="true" />
+            <element signature="e#8322#8328#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/service/PostService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="61" column="39" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/PostController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/meta/Post.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="34" column="28" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hunter/spittr/controller/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/include/header.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/include/head.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/userPostList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="38" lean-forward="true" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/registerForm.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="511">
+          <caret line="104" column="27" selection-start-line="104" selection-start-column="27" selection-end-line="104" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/check.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="19" column="53" lean-forward="true" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/include/spittleList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/hotTopic.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="36" lean-forward="true" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="61" column="15" lean-forward="true" selection-start-line="61" selection-start-column="15" selection-end-line="61" selection-end-column="15" />
+        <state relative-caret-position="194">
+          <caret line="262" column="20" selection-start-line="262" selection-start-column="20" selection-end-line="262" selection-end-column="20" />
         </state>
       </provider>
     </entry>

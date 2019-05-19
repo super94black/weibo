@@ -22,11 +22,11 @@ import java.util.Map;
 
 @Controller
 @RequestMapping("/")
-public class SpittleController {
+public class IndexController {
     @Resource
     private SpittleService spittleService;
     @Resource
-    private UserService spitterService;
+    private UserService userService;
     @Autowired
     private PostService postService;
 
@@ -36,32 +36,49 @@ public class SpittleController {
                                  Model model, HttpSession session) {
 
         User user = (User) session.getAttribute("user");
-        model.addAttribute("user",user);
+
         int userId = 0;
-        if(null != user){
+        if(null != user) {
             userId = (int) user.getId();
+            System.out.println(user.getHeadIcon());
+            model.addAttribute("headImg",user.getHeadIcon());
         }
-        PageVo<Post> pageVo = postService.getAllPost(pageNum,0,userId);
-        model.addAttribute("map",pageVo.getMap());
-        model.addAttribute("pageInfo", pageVo.getPageInfo());
+        getAllPost(user,model,pageNum, userId,0);
+        List<Post> list = null;
+        try {
+            list = postService.getHotTopic();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        model.addAttribute("hotTopicList",list);
         return "index";
     }
 
-    //获取单条动态
-//    @RequestMapping(value = "/{spittleId}", method = RequestMethod.GET)
-//    public String getSpittle(@PathVariable("spittleId") long spittleId,
-//                             Model model) {
-//
-//        Spittle spittle = spittleService.getSpittle(spittleId);
-//
-//        if (spittle == null) {
-//
-//            throw new SpittleNotFoundException();
-//        }
-//
-//        model.addAttribute("spittle", spittle);
-//        return "spittle";
-//    }
+
+    @RequestMapping(value = "user", method = RequestMethod.GET)
+    public String getSpittle(@RequestParam("uid") Integer uid,
+                             @RequestParam(value = "pageNum", defaultValue = "1") int pageNum,
+                             Model model,HttpSession session) {
+
+
+        User user = (User) session.getAttribute("user");
+
+        if(null != user) {
+
+            model.addAttribute("headImg",user.getHeadIcon());
+        }
+
+        getAllPost(user,model,pageNum, uid,1);
+        return "userPostList";
+
+
+
+
+
+    }
+
+
+
 
     //发送动态
     @RequestMapping(method = RequestMethod.POST)
@@ -89,15 +106,31 @@ public class SpittleController {
     @RequestMapping(value = "/user/{username}", method = RequestMethod.GET)
     public String showSpitterProfile(@PathVariable("username") String username,
                                      @RequestParam(value = "pageNum", defaultValue = "1") int pageNum,
-                                     Model model) {
+                                     Model model,HttpSession session) {
+
+
 
         //展示具体用户主页的基本信息
-        User user = spitterService.getByUsername(username);
-        model.addAttribute("user", user);
+        User user = userService.getByUsername(username);
 
-        PageInfo pageInfo = spittleService.getSpittlesByUserId(pageNum, user.getId());
-        model.addAttribute("pageInfo", pageInfo);
-
+        if(null == username || "".equals(username) || null == user){
+            return "index";
+        }
+        session.setAttribute("user",user);
+        getAllPost(user,model,pageNum, (int) user.getId(),1);
         return "profile";
     }
+
+    public void getAllPost(User user,Model model,int pageNum,int userId,int type){
+        model.addAttribute("user", user);
+        PageVo<Post> pageVo = postService.getAllPost(pageNum, userId,type);
+        model.addAttribute("map",pageVo.getMap());
+        model.addAttribute("pageInfo", pageVo.getPageInfo());
+    }
+
+
+
+
+
+
 }

@@ -58,11 +58,7 @@
                         昵称：${user.nickname}
                     </label>
                 </div>
-                <div class="row">
-                    <label class="col-md-2 col-md-offset-5 control-label">
-                        邮箱：${user.email}
-                    </label>
-                </div>
+
             </div>
         </div>
     </div>

@@ -93,18 +93,24 @@ window.onload = function () {
      * @param el 点击的元素
      */
     function reply(box, el) {
+
+        if(userId == null || '' == userId || '0' == userId){
+            alert("请您先登陆");
+            return;
+        }
+
+        var userImg = $("#userImg").val();
         var commentList = box.getElementsByClassName('comment-list')[0];
         var textarea = box.getElementsByClassName('comment')[0];
         var commentBox = document.createElement('div');
         commentBox.className = 'comment-box clearfix';
         commentBox.setAttribute('user', 'self');
         commentBox.innerHTML =
-            '<img class="myhead" src="/assets/img/zgr.jpg" alt=""/>' +
+            '<img class="myhead" src="' +userImg +  '" alt=""/>' +
                 '<div class="comment-content">' +
                 '<p class="comment-text"><span class="user">' + nickName + '：</span>' + textarea.value + '</p>' +
                 '<p class="comment-time">' +
                 formateDate(new Date()) +
-                '<a href="javascript:;" class="comment-praise" total="0" my="0" style="">赞</a>' +
                 '</p>' +
                 '</div>';
 
@@ -208,7 +214,6 @@ window.onload = function () {
 
     //把事件代理到每条分享div容器
     for (var i = 0; i < boxs.length; i++) {
-
         //点击
         boxs[i].onclick = function (e) {
             e = e || window.event;
@@ -254,7 +259,8 @@ window.onload = function () {
 
         //评论
         var textArea = boxs[i].getElementsByClassName('comment')[0];
-
+        if(i == 0)
+            continue
         //评论获取焦点
         textArea.onfocus = function () {
             this.parentNode.className = 'text-box text-box-on';
@@ -296,13 +302,12 @@ window.onload = function () {
 
     }
 
-
-
-}
+};
 
 function replayOther(postid,uid) {
     postId = postid;
     userId = uid;
+
 
 }
 function deletePost(postId) {
@@ -314,7 +319,8 @@ function zan(count,is,uid,pid) {
     isZan = is;
     postId = pid;
     userId = uid;
-
 }
+
+
 
 

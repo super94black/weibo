@@ -2,10 +2,12 @@ package com.hunter.spittr.controller;
 
 import com.hunter.spittr.meta.User;
 import com.hunter.spittr.service.UserService;
+import com.hunter.spittr.util.Result;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.Cookie;
@@ -26,7 +28,11 @@ public class LoginController {
         //判断session中是否已有用户对象
         User user = (User)session.getAttribute("user");
         if (user != null){
+
             model.addAttribute("nickname", user.getNickname());
+            //如果是管理用户 直接进入后台界面
+            if(user.getType() == 2)
+                return "redirect:/admin/check";
             return "redirect:/user/"+ user.getUsername();
         }
         model.addAttribute("user", new User());
@@ -34,7 +40,8 @@ public class LoginController {
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public String login(@Valid User user,
+    @ResponseBody
+    public Result login(@Valid User user,
                         Model model,
                         HttpSession session,
                         HttpServletResponse response) {
@@ -42,20 +49,16 @@ public class LoginController {
         //验证用户名和密码是否正确
         user = spitterService.verifySpitter(user);
         if (user != null) {
-            Cookie userId = new Cookie("userId", String.valueOf(user.getId()));
-
-            if(user.isAutoLogin()){//如果勾选了自动登录，则有效期跟session保持一致
-                userId.setMaxAge(30*60);
-            }
-            response.addCookie(userId);
-            model.addAttribute("nickname", user.getNickname());
+            user.setPassword(null);
             session.setAttribute("user", user);
             model.addAttribute("user",user);
-            return "redirect:/user/" + user.getUsername() +"?pageNum=1";
+
+            String url = "http://localhost:8080/admin/check?pageNum=1";
+
+            return Result.ok(url);
         }
 
-        model.addAttribute("msg","用户名或密码错误！");
-        return "login";
+        return Result.error("用户或密码错误");
     }
 
 

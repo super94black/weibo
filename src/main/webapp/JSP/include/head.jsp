@@ -8,6 +8,12 @@
     <link href="/css/bootstrap.min.css" rel="stylesheet" />
     <script src="/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
-    <script type="text/javascript" src="/assets/js/main.js"></script>
     <link href="/css/style.css" rel="stylesheet">
+    <link href="/assets/css/hotTopic.css" rel="stylesheet">
+
+    <script src="/assets/js/index.js"></script>
+    <script src="/assets/js/admin.js"></script>
+
+    <meta http-equiv="Content-Type" content="multipart/form-data; charset=utf-8" />
+
 </head>

@@ -33,10 +33,18 @@ public class Result {
     public static Result ok() {
         return new Result(null);
     }
+
     public static Result error() {
         Result result = new Result();
         result.setStatus(400);
         result.setMsg("error");
+        return result;
+    }
+
+    public static Result error(String msg) {
+        Result result = new Result();
+        result.setStatus(400);
+        result.setMsg(msg);
         return result;
     }
 

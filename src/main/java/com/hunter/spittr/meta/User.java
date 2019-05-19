@@ -4,6 +4,7 @@ import org.hibernate.validator.constraints.Email;
 
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+import java.sql.Timestamp;
 
 public class User {
 
@@ -12,14 +13,9 @@ public class User {
     @Pattern(regexp = "^[a-zA-Z0-9_]{5,11}$", message = "{username.size}")
     private String username;
 
-    @Size(min = 8, max = 25, message = "{password.size}")
+    @Size(min = 8, max = 16, message = "{password.size}")
     private String password;
 
-    /*Email的验证，前端的input type设为email时，就对其进行了格式的把控
-            干脆把email格式的验证完全交给前端；关于Email有效性的判断之后再实现*/
-    @Email(regexp = "^(\\w)+(\\.\\w+)*@(\\w)+((\\.\\w+)+)$",
-            message = "{email.valid}")
-    private String email;
 
     //用户头像及头像缩略图
     private String headIcon;
@@ -28,8 +24,24 @@ public class User {
     @Pattern(regexp = "^[\u4e00-\u9fa5a-zA-Z0-9_]{2,12}$", message = "{nickname.size}")
     private String nickname;
 
-    //非数据库内容
-    private boolean autoLogin;
+    private Timestamp create_time;
+    private int type;
+
+    public Timestamp getCreate_time() {
+        return create_time;
+    }
+
+    public void setCreate_time(Timestamp create_time) {
+        this.create_time = create_time;
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
+    }
 
     public long getId() {
         return id;
@@ -55,13 +67,7 @@ public class User {
         this.password = password;
     }
 
-    public String getEmail() {
-        return email;
-    }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
 
     public String getHeadIcon() {
         return headIcon;
@@ -87,11 +93,5 @@ public class User {
         this.thumbnail = thumbnail;
     }
 
-    public boolean isAutoLogin() {
-        return autoLogin;
-    }
 
-    public void setAutoLogin(boolean autoLogin) {
-        this.autoLogin = autoLogin;
-    }
 }
