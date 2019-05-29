@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class PageController {
 
 
-    @RequestMapping(value = "/post",method = RequestMethod.GET)
+    @RequestMapping(value = "/page/post",method = RequestMethod.GET)
     public String post() {
 
         return "post";

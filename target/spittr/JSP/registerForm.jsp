@@ -88,8 +88,7 @@ modelAttribute用于绑定模型对象（对象在Controller中创建）;
 
     function register() {
         var formData = new FormData($( "#register" )[0]);
-        alert(formData.get('username'))
-        alert(formData.get('nickname'))
+
         var regNickName = /^[\u4e00-\u9fa5a-a-zA-Z0-9_]{2,12}$/;
         var regUsername  = /^[a-zA-Z0-9_]{5,11}$/;
         if(!regUsername.test(formData.get('username'))){

@@ -8,6 +8,7 @@
 <%@ include file="include/header.jsp" %>
 
 <div class="container">
+
     <br>
     <%--头像在后端已经做了大小的处理，因此不用设置宽高等属性--%>
     <div class="row">
@@ -37,16 +38,26 @@
                 <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">用户信息</a></li>
             </ul>
         </div>
+        <div class="b" >
+            <div class=""></div>
+            <div class="">
+                <ul class="">
+                </ul>
+            </div>
+        </div>
     </div>
+
     <div class="row">
+
         <!-- Tab panes -->
         <div class="tab-content">
             <div role="tabpanel" class="tab-pane active" id="home">
                 <br>
+
                 <%@ include file="include/spittleList.jsp"%>
                 <%@ include file="include/paging.jsp"%>
             </div>
-            <div role="tabpanel" class="tab-pane " id="settings">
+            <div role="tabpanel" class="tab-pane " id="settings" style="margin-top: -400px">
                 <br>
                 <div class="row">
                     <label class="col-md-2 col-md-offset-5 control-label">

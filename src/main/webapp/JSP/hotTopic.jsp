@@ -6,7 +6,7 @@
         <ul class="d">
             <c:if test="${hotTopicList ne null}">
             <c:forEach var="post" varStatus="index" items="${hotTopicList}">
-            <li class="aa"><a href="http://localhost:8080/hotTopic?pid=${post.id}"/><span>${index.index + 1}.</span>${post.content}</li>
+            <li class="aa"><a href="http://localhost:8080/post?postId=${post.id}"/><span>${index.index + 1}.</span>${post.content}</li>
             </c:forEach>
             </c:if>
         </ul>

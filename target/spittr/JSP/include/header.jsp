@@ -43,7 +43,7 @@
                     </li>
                     <c:if test="${user.type eq 2 && user ne null}">
                     <li>
-                        <a href="<c:url value="/admin/check" />">
+                        <a href="<c:url value="/check" />">
                             <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
                                 审帖
                         </a>
@@ -52,7 +52,7 @@
 
                     <c:if test="${user.type eq 1 && user ne null}">
                         <li>
-                            <a href="<c:url value="/post" />">
+                            <a href="<c:url value="/page/post" />">
                                 <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
                                 发帖
                             </a>

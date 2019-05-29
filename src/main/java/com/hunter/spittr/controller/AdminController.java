@@ -27,7 +27,7 @@ public class AdminController {
     @Autowired
     PostService postService;
 
-    @RequestMapping(value = "/admin/check",method = RequestMethod.GET)
+    @RequestMapping(value = "/check",method = RequestMethod.GET)
     public String getUncheckPost(Model model){
         List<PostPo> list = postService.getUncheckedPost();
         model.addAttribute("list",list);
@@ -35,7 +35,7 @@ public class AdminController {
 
     }
 
-    @RequestMapping(value = "/admin/check",method = RequestMethod.POST)
+    @RequestMapping(value = "/check",method = RequestMethod.POST)
     @ResponseBody
     public Result acceptPost(@RequestParam("pid") Integer pid){
         try {

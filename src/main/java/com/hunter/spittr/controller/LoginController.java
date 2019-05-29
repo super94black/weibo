@@ -47,15 +47,19 @@ public class LoginController {
                         HttpServletResponse response) {
 
         //验证用户名和密码是否正确
+        String url = "";
         user = spitterService.verifySpitter(user);
         if (user != null) {
             user.setPassword(null);
             session.setAttribute("user", user);
             model.addAttribute("user",user);
-
-            String url = "http://localhost:8080/admin/check?pageNum=1";
-
+            if(user.getType() == 2){
+                url = "http://localhost:8080/check?pageNum=1";
+                return Result.ok(url);
+            }
+            url = "http://localhost:8080/user/" + user.getUsername() + "?pageNum=1";
             return Result.ok(url);
+
         }
 
         return Result.error("用户或密码错误");

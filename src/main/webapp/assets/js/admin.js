@@ -10,7 +10,7 @@ function check(postId) {
             console.log(data);
             if(data.status == '200'){
                 alert("审核通过")
-                window.location = "http://localhost:8080/admin/check";
+                window.location = "http://localhost:8080/check";
             }else{
                 alert(data.msg);
             }

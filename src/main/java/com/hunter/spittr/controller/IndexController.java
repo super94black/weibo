@@ -40,7 +40,6 @@ public class IndexController {
         int userId = 0;
         if(null != user) {
             userId = (int) user.getId();
-            System.out.println(user.getHeadIcon());
             model.addAttribute("headImg",user.getHeadIcon());
         }
         getAllPost(user,model,pageNum, userId,0);
@@ -123,7 +122,7 @@ public class IndexController {
 
     public void getAllPost(User user,Model model,int pageNum,int userId,int type){
         model.addAttribute("user", user);
-        PageVo<Post> pageVo = postService.getAllPost(pageNum, userId,type);
+        PageVo<Post> pageVo = postService.getAllPost(pageNum, userId,type,0);
         model.addAttribute("map",pageVo.getMap());
         model.addAttribute("pageInfo", pageVo.getPageInfo());
     }

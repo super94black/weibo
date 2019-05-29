@@ -41,7 +41,7 @@ window.onload = function () {
         var oldTotal = parseInt(praisesTotal.getAttribute('total'));
 
         if (txt == '取消赞') {
-            alert(zanCount + " -----" + isZan +"------" + userId + "---" + postId);
+            //alert(zanCount + " -----" + isZan +"------" + userId + "---" + postId);
             count = parseInt(zanCount) - 1;
             praisesTotal.innerHTML = count + '个人觉得很赞';
             el.innerHTML = '赞';
@@ -114,7 +114,7 @@ window.onload = function () {
                 '</p>' +
                 '</div>';
 
-        alert(textarea.value + "---" + postId + "--" + userId);
+        //alert(textarea.value + "---" + postId + "--" + userId);
         //向后台提交回复请求
         var pid = postId;
         var uid = userId;
@@ -193,7 +193,7 @@ window.onload = function () {
             textarea.onkeyup();
         }
         else {
-            alert(delId)
+            //alert(delId)
             removeNode(commentBox);
             $.ajax({
                 type: "POST",
@@ -259,8 +259,11 @@ window.onload = function () {
 
         //评论
         var textArea = boxs[i].getElementsByClassName('comment')[0];
-        if(i == 0)
+        if(textArea == null)
             continue
+        if(textArea.attributes.getNamedItem("a"))
+            continue
+
         //评论获取焦点
         textArea.onfocus = function () {
             this.parentNode.className = 'text-box text-box-on';

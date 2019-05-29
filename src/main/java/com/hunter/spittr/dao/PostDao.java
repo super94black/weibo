@@ -16,6 +16,8 @@ public interface PostDao {
     @Select("SELECT * FROM post WHERE uid = #{uid} and pid = 0 and type = 1 order by create_time desc")
     List<Post> getAllPostByUid(int uid);
 
+
+
     @Select("SELECT * FROM post WHERE pid = 0 and type = 0 order by create_time desc")
     List<Post> getUncheckedPost();
 
@@ -48,4 +50,7 @@ public interface PostDao {
 
     @Update("update post set type = 1 where id = #{pid}")
     void updateByPostId(int pid);
+
+
+
 }

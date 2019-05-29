@@ -9,6 +9,7 @@ import com.hunter.spittr.dao.ZanDao;
 import com.hunter.spittr.meta.*;
 import com.hunter.spittr.service.PostService;
 import com.hunter.spittr.service.VideoService;
+import com.hunter.spittr.service.WordService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -35,6 +36,8 @@ public class PostServiceImpl implements PostService {
     VideoService videoService;
     @Autowired
     VideoDao videoDao;
+    @Autowired
+    WordService wordService;
 
 
 
@@ -44,16 +47,21 @@ public class PostServiceImpl implements PostService {
      * @return
      */
 
-    public PageVo<Post>  getAllPost(int pageNum, int userId,int type){
+    public PageVo<Post>  getAllPost(int pageNum, int userId,int type,int postId){
         List<Post> list = new ArrayList<Post>();
         PageHelper.startPage(pageNum, 3);
         //startPage方法之后紧跟的查询 才是 分页查询
         if(userId != 0 && type == 1){
             //type == 1 userId != 0说明查询的是该用户所发送所有动态
             list = postDao.getAllPostByUid(userId);
-        }else if(type == 0)
+        }else if(type == 0){
             //type == 0 说明无论用户登陆与否查询的是所有人的动态
             list = postDao.getAllPostByPid();
+        }else if(type == 2){
+            //type = 2 说明是通过PostID获取所有帖子
+            list.add(postDao.getPostById(postId));
+        }
+
         //使用pageInfo包装查询后的结果，只需将pageInfo交给页面即可
         PageInfo<Post> pageInfo = new PageInfo<Post>(list);
 
@@ -79,6 +87,10 @@ public class PostServiceImpl implements PostService {
                 postPo.setIsZan(0);
             postPo.setPost(post);
             postPo.setReplayName(null);
+            Video video = videoDao.getVideoByPid(post.getId());
+            if(null != video && !"".equals(video.getName())){
+                postPo.setVideo(video);
+            }
             postPoList = getAllPost(postPoList,post);
             map.put(postPo,postPoList);
         }
@@ -211,16 +223,18 @@ public class PostServiceImpl implements PostService {
     @Transactional
     public void post(Integer uid,String imgAdd,String vodAdd,String content)throws Exception{
         Post post = new Post();
+        if(wordService.isHaveNotAcceptWords(content) || null != imgAdd || null != vodAdd)
+            post.setType(0);
+        else
+            post.setType(1);
         post.setUid(uid);
         post.setImg_add(imgAdd);
         post.setContent(content);
-        post.setType(0);
         post.setCreate_time(new Timestamp(System.currentTimeMillis()));
         post.setUpdate_time(new Timestamp(System.currentTimeMillis()));
         post.setPid(0);
         post.setIs_leaf(1);
         post.setRoot(1);
-
         postDao.post(post);
         System.out.println(post.getId());
 
@@ -279,5 +293,13 @@ public class PostServiceImpl implements PostService {
         }
         return postList;
     }
+
+
+    @Transactional
+    public PageVo<Post> getPostById(int pageNum,int postId)throws Exception{
+        return getAllPost(pageNum,0,2,postId);
+    }
+
+
 
 }

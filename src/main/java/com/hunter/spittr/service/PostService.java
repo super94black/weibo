@@ -14,11 +14,12 @@ import java.util.Map;
  * @Content
  */
 public interface PostService {
-    public PageVo<Post> getAllPost(int pageNum,int userId,int type);
+    public PageVo<Post> getAllPost(int pageNum,int userId,int type,int postId);
     public boolean replayPost(Post post);
     public void deleteByPostId(int id);
     public void post(Integer uid,String imgAdd,String vodAdd,String content)throws Exception;
     public List<PostPo> getUncheckedPost();
     public void updateByPostId(int pid) throws Exception;
     public List<Post> getHotTopic() throws Exception;
+    public PageVo<Post> getPostById(int pageNum,int postId)throws Exception;
 }
