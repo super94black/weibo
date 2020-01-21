@@ -13,7 +13,7 @@
 
     <properties>
         <Encoding>UTF-8</Encoding>
-        <spring-version>5.0.6.RELEASE</spring-version>
+        <spring-version>5.2.3.RELEASE</spring-version>
         <json-version>2.9.5</json-version>
     </properties>
 
